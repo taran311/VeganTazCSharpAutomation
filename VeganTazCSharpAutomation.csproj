@@ -1,0 +1,61 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\HomePage - Copy (2).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\HomePage - Copy (3).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\HomePage - Copy (4).feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\HomePage - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="88.0.4324.9600" />
+    <PackageReference Include="SpecFlow" Version="3.7.13" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.7.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\ExercisePage.feature.cs">
+      <DependentUpon>ExercisePage.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\FatlossPage.feature.cs">
+      <DependentUpon>FatlossPage.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\TrainingPage.feature.cs">
+      <DependentUpon>TrainingPage.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\DietPage.feature.cs">
+      <DependentUpon>DietPage.feature</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\ExercisePage.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\FatlossPage.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\TrainingPage.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\DietPage.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+</Project>
