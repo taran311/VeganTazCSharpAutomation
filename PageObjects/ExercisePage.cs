@@ -12,8 +12,8 @@ namespace VeganTazCSAutomation.PageObjects
         }
 
         public IWebElement Exercise => _driver.FindElement(By.CssSelector("input[class='ui-autocomplete-input']"));
-
-        public IList<IWebElement> AutoCompleteList => _driver.FindElements(By.CssSelector("ul li"));
+        public IWebElement AutoCompleteWidget => _driver.FindElement(By.CssSelector("ul[class*='ui-autocomplete']"));
+        public IList<IWebElement> AutoCompleteList => _driver.FindElements(By.CssSelector("ul[class*='ui-autocomplete'][style*='display: block;'] li"));
 
         public void Get()
         {

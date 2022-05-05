@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj": {}
+    "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj": {}
   },
   "projects": {
-    "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj": {
+    "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj",
+        "projectUniqueName": "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj",
         "projectName": "VeganTazCSharpAutomation",
-        "projectPath": "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj",
-        "packagesPath": "C:\\Users\\Taz_d\\.nuget\\packages\\",
-        "outputPath": "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation\\obj\\",
+        "projectPath": "C:\\VeganTazCSharpAutomation\\VeganTazCSharpAutomation.csproj",
+        "packagesPath": "C:\\Users\\Taran\\.nuget\\packages\\",
+        "outputPath": "C:\\VeganTazCSharpAutomation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Taz_d\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Taran\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,37 +40,41 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Gherkin": {
+              "target": "Package",
+              "version": "[23.0.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.5.0, )"
+              "version": "[17.1.0, )"
             },
             "NUnit": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[3.13.3, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.16.1, )"
+              "version": "[4.2.1, )"
             },
             "Selenium.Support": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[4.1.1, )"
             },
             "Selenium.WebDriver": {
               "target": "Package",
-              "version": "[3.141.0, )"
+              "version": "[4.1.1, )"
             },
             "Selenium.WebDriver.ChromeDriver": {
               "target": "Package",
-              "version": "[88.0.4324.9600, )"
+              "version": "[101.0.4951.4100, )"
             },
             "SpecFlow": {
               "target": "Package",
-              "version": "[3.7.13, )"
+              "version": "[3.9.74, )"
             },
             "SpecFlow.NUnit": {
               "target": "Package",
-              "version": "[3.7.13, )"
+              "version": "[3.9.74, )"
             }
           },
           "imports": [
@@ -88,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

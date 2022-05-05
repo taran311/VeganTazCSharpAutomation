@@ -27,6 +27,8 @@ namespace VeganTazCSAutomation.PageObjects
 
         public IWebElement Training => _driver.FindElement(By.Id("nav-training"));
 
+        public IWebElement GetDiv(string divToGet) => _driver.FindElement(By.CssSelector($"#{divToGet}Div"));
+
         
     }
 }

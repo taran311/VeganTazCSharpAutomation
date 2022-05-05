@@ -12,8 +12,7 @@ namespace VeganTazCSharpAutomation.Helpers
         [StepArgumentTransformation]
         public List<string> TransformStringIntoList(string stringToParse)
         {
-            var formattedString = stringToParse.Replace(" ", "");
-            var stringArray = formattedString.Split(',');
+            var stringArray = stringToParse.Split(", ");
             var listOfStrings = stringArray.OfType<string>().ToList();
             return listOfStrings;
         }
