@@ -75,10 +75,16 @@ namespace VeganTazCSharpAutomation.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Learn More button Navigation")]
-        public void LearnMoreButtonNavigation()
+        [NUnit.Framework.TestCaseAttribute("Natural Bodybuilding Workout", "Training", null)]
+        [NUnit.Framework.TestCaseAttribute("The basics of Vegan Nutrition", "Diet", null)]
+        [NUnit.Framework.TestCaseAttribute("Watch, Practice and Learn to Lift!", "Exercise", null)]
+        [NUnit.Framework.TestCaseAttribute("The basics of Optimal Vegan Fatloss", "Fatloss", null)]
+        public void LearnMoreButtonNavigation(string heading, string toPage, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("Heading", heading);
+            argumentsOfScenario.Add("ToPage", toPage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Learn More button Navigation", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
@@ -91,28 +97,13 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 4
-testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 5
-testRunner.When("I click Learn more button under the <Heading> heading", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I click Learn more button under the {0} heading", heading), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Heading",
-                            "ToPage"});
-                table1.AddRow(new string[] {
-                            "Natural Bodybuilding Workout",
-                            "Training"});
-                table1.AddRow(new string[] {
-                            "The basics of Vegan Nutrition",
-                            "Diet"});
-                table1.AddRow(new string[] {
-                            "Watch, Practice and Learn to Lift!",
-                            "Exercise"});
-                table1.AddRow(new string[] {
-                            "The basics of Optimal Vegan Fatloss",
-                            "Fatloss"});
 #line 6
-testRunner.Then("I am on the <ToPage> Page", ((string)(null)), table1, "Then ");
+ testRunner.Then(string.Format("I am on the {0} Page", toPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -131,7 +122,7 @@ testRunner.Then("I am on the <ToPage> Page", ((string)(null)), table1, "Then ");
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("ToPage", toPage);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Page Navigation", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 13
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -141,14 +132,14 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 14
-testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 15
-testRunner.When(string.Format("I click on the {0} Nav Menu Item", toPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 16
-testRunner.Then(string.Format("I am on the {0} Page", toPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given("I am on the Home Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 17
+ testRunner.When(string.Format("I click on the {0} Nav Menu Item", toPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 18
+ testRunner.Then(string.Format("I am on the {0} Page", toPage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
